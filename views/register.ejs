@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/header/top.ejs") %>
+  <body>
+    <%- include("./partials/header/header.ejs") %>
+    <section id="hero" style="background-image: url('img/hero4.png')">
+      <div class="account-page">
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <div class="form-container">
+                <div class="form-btn">
+                  <span onclick="login()">Login</span>
+                  <span onclick="register()">Register</span>
+                  <hr id="Indicator" />
+                </div>
+                <%- include("./partials/form/loginform.ejs") %> <%-
+                include("./partials/form/signupform.ejs") %>
+              </div>
+            </div>
+            <div class="col-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include("./partials/footer/footer.ejs") %>
+    <script>
+      var LoginForm = document.getElementById("LoginForm");
+      var RegForm = document.getElementById("RegForm");
+      var Indicator = document.getElementById("Indicator");
+
+      function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(-500px)";
+        Indicator.style.transform = "translateX(261px)";
+        localStorage.setItem("indicator", "reg");
+      }
+
+      function login() {
+        RegForm.style.transform = "translateX(500px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(156px)";
+        localStorage.setItem("indicator", "log");
+      }
+      function indicate() {
+        let indcate = localStorage.getItem("indicator");
+        if (indcate === "reg") register();
+        else login();
+      }
+      indicate();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+<section
+  id="newsletter"
+  class="section-p1 section-m1"
+  style="background-image: url('img/banner/b14.png')"
+>
+  <div class="newstext">
+    <h4>Sign Up For Newsletters</h4>
+    <p>
+      Get E-mail updates about our latest shop and
+      <span>specialoffers.</span>
+    </p>
+  </div>
+  <div class="form">
+    <input type="text" placeholder="Your email address" />
+    <button class="normal">Sign Up</button>
+  </div>
+</section>
+<footer class="section-p1">
+  <div class="col">
+    <img class="logo" src="./img/logo.png" alt="" />
+    <h4>Contact</h4>
+    <p>
+      <strong>Address: </strong> 562 Wellignton Road, Street 32, San Francisco
+    </p>
+    <p><strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789</p>
+    <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+    <div class="follow">
+      <h4>Follow us</h4>
+      <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-pintereest-p"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <h4>About</h4>
+    <a href="#">About Us</a>
+    <a href="#">Delivery Information</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Contact Us</a>
+  </div>
+
+  <div class="col">
+    <h4>My Account</h4>
+    <a href="#">Sign In</a>
+    <a href="#">View cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="#">Help</a>
+  </div>
+  <div class="col install">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+    <div class="row">
+      <img src="img/pay/app.jpg" alt="" />
+      <img src="img/pay/play.jpg" alt="" />
+    </div>
+    <p>Secured Payment Gateways</p>
+    <img src="img/pay/pay.png" alt="" />
+  </div>
+  <div class="copyright">
+    <p>© Ecommerce</p>
+  </div>
+</footer>
+<script src="js/JavaScript.js"></script>
+<script src="js/functions.js"></script>
+<script>
+  // Speech Recognition API Setup
+  const SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+  recognition.continuous = false;
+  recognition.lang = "en-US";
+
+  // Select DOM elements
+  const start = document.querySelector("#start-mic");
+  const instruction = document.getElementById("header-chat-instruction");
+
+  // variables
+  let htmlString = "";
+  const accuracy = 0;
+
+  // functions
+  const handleStart = () => {
+    instruction.style.display = "block";
+    setTimeout(() => {
+      recognition.start();
+      document.getElementById("start-mic").style.backgroundColor = "#6c7770";
+    }, 1000);
+  };
+  // const handleStop = () => {
+  //   recognition.stop();
+  // };
+  const handleResults = (event) => {
+    console.log(event);
+    const { results, resultIndex } = event;
+    const { transcript, confidence } = results[resultIndex][0];
+    if (confidence >= accuracy) {
+      console.log(`Confidence ${confidence} <br> Command: ${transcript}`);
+      processResult(transcript);
+    }
+  };
+  const processResult = (result) => {
+    const processed = result.trim().toLowerCase();
+    let isRecognize = false;
+
+    if (processed.includes("go to")) {
+      isRecognize = true;
+      redirect(processed);
+    }
+
+    if (
+      processed.includes("add to cart") ||
+      processed.includes("at to cart") ||
+      processed.includes("add to card") ||
+      processed.includes("add to card")
+    ) {
+      isRecognize = true;
+      processedForAdd2Cart(processed);
+    }
+
+    if (
+      processed.includes("remove from the cart") ||
+      processed.includes("remove from the card")
+    ) {
+      isRecognize = true;
+      processedForRemoveFromCart(processed);
+    }
+
+    if (
+      processed.includes("cart destroy") ||
+      processed.includes("destroy cart") ||
+      processed.includes("card destroy") ||
+      processed.includes("destroy card")
+    ) {
+      isRecognize = true;
+      destroyCart();
+    }
+
+    if (processed.includes("increase quantity of")) {
+      isRecognize = true;
+      processIncreaseDecreaseQTY(processed, "+");
+    }
+
+    if (processed.includes("decrease quantity of")) {
+      isRecognize = true;
+      processIncreaseDecreaseQTY(processed, "-");
+    }
+
+    if (!isRecognize) {
+      Toastify({
+        text: "Couldn't recognize your voice!",
+        duration: 2000,
+      }).showToast();
+    }
+  };
+
+  //functions for voice instruction
+  async function destroyCart() {
+    let response = await fetch(`/cart/empty`);
+    if (response.status) {
+      const { message } = await response.json();
+      if (window.location.href.trim().includes("cart")) {
+        getCartDetails();
+      }
+      getCartCount();
+      Toastify({
+        text: message,
+        duration: 2000,
+      }).showToast();
+    } else {
+      Toastify({
+        text: "Failed to destroy cart!",
+        duration: 2500,
+      }).showToast();
+    }
+  }
+
+  function redirect(voicetxt) {
+    let link = voicetxt.split(" ");
+    const page = ["home", "about", "shop", "blog", "cart", "contact"];
+    if (page.includes(link[link.length - 1])) {
+      window.location.href = `http://localhost:3000/` + link[link.length - 1];
+    } else {
+      Toastify({
+        text: "Couldn't recognize your voice!",
+        duration: 1000,
+      }).showToast();
+    }
+  }
+
+  async function processIncreaseDecreaseQTY(voicetxt, flag) {
+    let voicearr = voicetxt.split(" ");
+    const filterdArr = voicearr.filter((item, i) => i > 2);
+
+    const product_name = filterdArr.join(" ");
+    let response = await fetch(`/cart/product/${product_name.trim()}`);
+    if (response.status === 200) {
+      const { product } = await response.json();
+      increaseDecreaseQTY(product._id, undefined, flag);
+    } else if (response.status === 401) {
+      Toastify({
+        text: "Opps! You need to login first.",
+        duration: 2500,
+      }).showToast();
+      setTimeout(() => (window.location.href = `http://localhost:3000/`), 3000);
+    } else {
+      Toastify({
+        text: "Product not found or it couldn't recognize your product name properly!",
+        duration: 2500,
+      }).showToast();
+    }
+  }
+  async function processedForRemoveFromCart(voicetxt) {
+    let voicearr = voicetxt.split(" ");
+    const filterdArr = voicearr.filter((item, i) => i > 3);
+
+    const product_name = filterdArr.join(" ");
+    let response = await fetch(`/cart/product/${product_name.trim()}`);
+    if (response.status === 200) {
+      const { product } = await response.json();
+      removeProductFromCart(product._id);
+    } else if (response.status === 401) {
+      Toastify({
+        text: "Opps! You need to login first.",
+        duration: 2500,
+      }).showToast();
+      setTimeout(() => (window.location.href = `http://localhost:3000/`), 3000);
+    } else {
+      Toastify({
+        text: "Product not found or it couldn't recognize your product name properly!",
+        duration: 2500,
+      }).showToast();
+    }
+  }
+  async function processedForAdd2Cart(voicetxt) {
+    let voicearr = voicetxt.split(" ");
+    let filterdArr = [];
+    let selectindex = voicearr.findIndex((i) => i === "select");
+    if (selectindex > -1) {
+      filterdArr = voicearr.filter((item, i) =>
+        i > 2 && i < selectindex ? true : false
+      );
+    } else {
+      filterdArr = voicearr.filter((item, i) => i > 2);
+    }
+    const product_name = filterdArr.join(" ");
+    let response = await fetch(`/cart/product/${product_name}`);
+    if (response.status === 200) {
+      const { product } = await response.json();
+      addToCart(product._id);
+    } else if (response.status === 401) {
+      Toastify({
+        text: "Opps! You need to login first.",
+        duration: 2500,
+      }).showToast();
+      setTimeout(() => (window.location.href = `http://localhost:3000/`), 3000);
+    } else {
+      Toastify({
+        text: "Product not found or it couldn't recognize your product name properly!",
+        duration: 2500,
+      }).showToast();
+    }
+  }
+
+  // add event listeners
+  start.addEventListener("click", handleStart);
+  //stop.addEventListener("click", handleStop);
+  recognition.addEventListener("result", handleResults);
+
+  // Handle the end of recognition (recognition stopped)
+  recognition.onend = () => {
+    document.getElementById("start-mic").style.backgroundColor = "#25d366";
+    instruction.style.display = "none";
+  };
+
+  getCartCount();
+</script>

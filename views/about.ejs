@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/header/top.ejs") %>
+
+  <body>
+    <%- include("./partials/header/header.ejs") %>
+    <section
+      id="page-header"
+      class="about-header"
+      style="background-image: url('img/about/bannner.png')"
+    >
+      <h2>#Know Us</h2>
+
+      <p>The goal is to keep us known all times!</p>
+    </section>
+    <section id="about-head" class="section-p1">
+      <img src="img/about/a6.jpg" alt="" />
+      <div>
+        <h2>Who we are ?</h2>
+        <p>
+          Lorem ipsum is a placeholder text commonly used to demonstrate the
+          visual form of a document or a typeface without relying on meaningful
+          content. Lorem ipsum may be used as a placeholder before final copy is
+          available
+        </p>
+        <abbr title=""
+          >Lorem ipsum is typically a corrupted version of De finibus bonorum et
+          malorum, a 1st-century BC text by the Roman statesman and philosopher
+          Cicero, with words altered.</abbr
+        >
+        <br /><br />
+        <marquee bgcolour="#ccc" loop="-1" scrollamount="5" width="100%">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </marquee>
+      </div>
+    </section>
+    <section id="about-app" class="section-p1">
+      <h1>Download Our <a href="#">App</a></h1>
+      <div class="video">
+        <video autoplay muted loop src="img/about/1.mp4"></video>
+      </div>
+    </section>
+    <section id="feature" class="section-p1">
+      <div class="fe-box">
+        <img src="img/features/f1.png" alt="" />
+        <h6>Free Shipping</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f2.png" alt="" />
+        <h6>Online Order</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f3.png" alt="" />
+        <h6>Save money</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f4.png" alt="" />
+        <h6>Prmotions</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f5.png" alt="" />
+        <h6>Happy sell</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f6.png" alt="" />
+        <h6>Support</h6>
+      </div>
+    </section>
+    <%- include("./partials/footer/footer.ejs") %>
+  </body>
+</html>

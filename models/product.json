@@ -1,0 +1,274 @@
+[
+  {
+    "name": "Cartoon Astronaut Yellow T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 5,
+    "price": 78,
+    "avatar": ["f1.jpg", "f2.jpg", "f3.jpg", "f4.jpg"],
+    "featured": true,
+    "createdAt": {
+      "$date": "2023-08-09T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-09T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Cartoon Astronaut Green T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 5,
+    "price": 78,
+    "avatar": ["f2.jpg", "f1.jpg", "f3.jpg", "f4.jpg"],
+    "featured": true,
+    "createdAt": {
+      "$date": "2023-08-08T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-08T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Cartoon Astronaut Brown T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 4,
+    "price": 78,
+    "avatar": ["f3.jpg", "f1.jpg", "f2.jpg", "f4.jpg"],
+    "featured": true,
+    "createdAt": {
+      "$date": "2023-08-07T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-07T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Cartoon Astronaut White T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 4,
+    "price": 78,
+    "avatar": ["f4.jpg", "f1.jpg", "f3.jpg", "f2.jpg"],
+    "featured": true,
+    "createdAt": {
+      "$date": "2023-08-06T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-06T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Cartoon Astronaut Blue T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 4,
+    "price": 78,
+    "avatar": ["f5.jpg", "f1.jpg", "f3.jpg", "f2.jpg"],
+    "featured": true,
+    "createdAt": {
+      "$date": "2023-08-05T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-05T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Cartoon Astronaut Full Sleeve T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 5,
+    "price": 80,
+    "avatar": ["f6.jpg", "f1.jpg", "f3.jpg", "f2.jpg"],
+    "featured": true,
+    "createdAt": {
+      "$date": "2023-08-04T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-04T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Ladies Pant",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["pant"],
+    "brand": "addidas",
+    "rating": 3,
+    "price": 49,
+    "avatar": ["f7.jpg", "f1.jpg", "f3.jpg", "f2.jpg"],
+    "featured": true,
+    "createdAt": {
+      "$date": "2023-08-03T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-03T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Ladies Skirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["skirt"],
+    "brand": "addidas",
+    "rating": 4,
+    "price": 58,
+    "avatar": ["f8.jpg", "f1.jpg", "f3.jpg", "f2.jpg"],
+    "featured": true,
+    "createdAt": {
+      "$date": "2023-08-02T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-02T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Plain Full Sleeve Light Blue T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 5,
+    "price": 70,
+    "avatar": ["n1.jpg", "n2.jpg", "n3.jpg", "n4.jpg"],
+    "featured": false,
+    "createdAt": {
+      "$date": "2023-09-11T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-11T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Plain Full Sleeve Grey T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 5,
+    "price": 70,
+    "avatar": ["n2.jpg", "n1.jpg", "n3.jpg", "n4.jpg"],
+    "featured": false,
+    "createdAt": {
+      "$date": "2023-09-10T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-10T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Plain Full Sleeve White T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 5,
+    "price": 72,
+    "avatar": ["n3.jpg", "n1.jpg", "n2.jpg", "n4.jpg"],
+    "featured": false,
+    "createdAt": {
+      "$date": "2023-09-09T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-09T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Plain Short Sleeve T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 4,
+    "price": 65,
+    "avatar": ["n4.jpg", "n1.jpg", "n2.jpg", "n3.jpg"],
+    "featured": false,
+    "createdAt": {
+      "$date": "2023-09-08T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-08T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Plain Full Sleeve Dark Blue T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["shirt"],
+    "brand": "addidas",
+    "rating": 5,
+    "price": 78,
+    "avatar": ["n5.jpg", "n1.jpg", "n2.jpg", "n3.jpg"],
+    "featured": false,
+    "createdAt": {
+      "$date": "2023-09-07T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-07T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Gents Short Pant",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["pant"],
+    "brand": "addidas",
+    "rating": 5,
+    "price": 52,
+    "avatar": ["n6.jpg", "n1.jpg", "n2.jpg", "n3.jpg"],
+    "featured": false,
+    "createdAt": {
+      "$date": "2023-09-06T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-06T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Denim Brown Jacket",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["jacket"],
+    "brand": "puma",
+    "rating": 5,
+    "price": 150,
+    "avatar": ["n7.jpg", "n7.jpg", "n2.jpg", "n3.jpg"],
+    "featured": false,
+    "createdAt": {
+      "$date": "2023-09-05T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-05T19:10:29.181Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "Plain Short Sleeve Black T-shirt",
+    "product_details": "This Summer dress will soon become a seasonal favorite. You’ll be dazzling in this stunning outfit that shows off your sense of style, sophistication, and flair for fun. This dress is designed for looks and ease, made to be breathable and built for comfort.",
+    "category": ["jacket"],
+    "brand": "puma",
+    "rating": 5,
+    "price": 99,
+    "avatar": ["n8.jpg", "n7.jpg", "n2.jpg", "n3.jpg"],
+    "featured": false,
+    "createdAt": {
+      "$date": "2023-09-04T19:10:29.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-04T19:10:29.181Z"
+    },
+    "__v": 0
+  }
+]

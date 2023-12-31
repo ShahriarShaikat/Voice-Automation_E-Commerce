@@ -1,0 +1,61 @@
+<form action="/registration" method="POST" id="RegForm">
+  <input
+    class="<%= errors.name && 'border-b-red' %>"
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    value="<%= data.name ? data.name : '' %>"
+  />
+
+  <% if (errors.name) { %>
+  <p class="error"><%= errors.name.msg %></p>
+  <% } %>
+
+  <input
+    class="<%= errors.email && 'border-b-red' %>"
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    value="<%= data.email ? data.email : '' %>"
+  />
+
+  <% if (errors.email) { %>
+  <p class="error"><%= errors.email.msg %></p>
+  <% } %>
+
+  <input
+    class="<%= errors.mobile && 'border-b-red' %>"
+    type="text"
+    name="mobile"
+    placeholder="Your phone no."
+    value="<%= data.mobile ? data.mobile : '' %>"
+  />
+
+  <% if (errors.mobile) { %>
+  <p class="error"><%= errors.mobile.msg %></p>
+  <% } %>
+
+  <input
+    class="<%= errors.password && 'border-b-red' %>"
+    type="password"
+    name="password"
+    placeholder="Password"
+    value="<%= data.password ? data.password : '' %>"
+  />
+  <% if (errors.password) { %>
+  <p class="error"><%= errors.password.msg %></p>
+  <% } %>
+
+  <input
+    class="<%= errors.re_pass && 'border-b-red' %>"
+    type="password"
+    name="re_pass"
+    placeholder="Repeat your password"
+    value="<%= data.re_pass ? data.re_pass : '' %>"
+  />
+  <% if (errors.re_pass) { %>
+  <p class="error"><%= errors.re_pass.msg %></p>
+  <% } %>
+
+  <button type="submit" class="btn">Register</button>
+</form>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/header/top.ejs") %>
+
+  <body>
+    <%- include("./partials/header/header.ejs") %>
+    <section
+      id="page-header"
+      style="background-image: url('img/banner/b1.jpg')"
+    >
+      <h2>#stay Home</h2>
+
+      <p>Save more with cupons & up to 70% off!</p>
+    </section>
+    <section id="product1" class="section-p1">
+      <div class="pro-container">
+        <% products.forEach(function(fproduct) { %>
+
+        <div class="pro">
+          <img src="<%= 'img/products/'+fproduct.avatar[0] %>" alt="" />
+          <div class="des">
+            <span><%= fproduct.brand %></span>
+            <h5><%= fproduct.name %></h5>
+            <div class="star">
+              <% for(let i=0;i<=fproduct.rating;i++){%>
+              <i class="fas fa-star"></i>
+              <%} %>
+            </div>
+            <h4><%= '$'+fproduct.price %></h4>
+          </div>
+          <a onclick="addToCart('<%= fproduct._id %>')">
+            <i class="fal fa-shopping-cart cart"> </i
+          ></a>
+        </div>
+
+        <% }) %>
+      </div>
+    </section>
+    <section id="pagination" class="section=p1">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+    </section>
+    <%- include("./partials/footer/footer.ejs") %>
+  </body>
+</html>

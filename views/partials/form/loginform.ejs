@@ -1,0 +1,28 @@
+<form action="/" method="POST" id="LoginForm">
+  <input
+    type="text"
+    placeholder="Username"
+    name="username"
+    value="<%= data.username ? data.username : '' %>"
+    class="<%= errors.username && 'border-b-red' %>"
+  />
+  <% if (errors.username) { %>
+  <p class="error"><%= errors.username.msg %></p>
+  <% } %>
+
+  <input
+    type="password"
+    placeholder="Password"
+    name="password"
+    class="<%= errors.password && 'border-b-red' %>"
+  />
+
+  <% if (errors.password) { %>
+  <p class="error"><%= errors.password.msg %></p>
+  <% } if (errors.common) { %>
+  <p class="error"><%= errors.common.msg %></p>
+  <% } %>
+
+  <button type="submit" class="btn" name="signin" value="Login">Login</button>
+  <a href="#" class="font">Forget password</a>
+</form>

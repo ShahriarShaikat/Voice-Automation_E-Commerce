@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/header/top.ejs") %>
+
+  <body>
+    <%- include("./partials/header/header.ejs") %>
+    <section id="hero" style="background-image: url('img/hero4.png')">
+      <h4>Trade-in-offer</h4>
+      <h2>Super vale deals</h2>
+      <h1>On all products</h1>
+      <p>Save more with cupons & up to 70% off!</p>
+      <button class="bttn" style="background-image: url('img/button.png')">
+        Shop now
+      </button>
+    </section>
+    <section id="feature" class="section-p1">
+      <div class="fe-box">
+        <img src="img/features/f1.png" alt="" />
+        <h6>Free Shipping</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f2.png" alt="" />
+        <h6>Online Order</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f3.png" alt="" />
+        <h6>Save money</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f4.png" alt="" />
+        <h6>Prmotions</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f5.png" alt="" />
+        <h6>Happy sell</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/features/f6.png" alt="" />
+        <h6>Support</h6>
+      </div>
+    </section>
+    <section id="product1" class="section-p1">
+      <h2>Featured Products</h2>
+      <p>Summer Collection New Morden Design</p>
+      <div class="pro-container">
+        <% featuredProduct.forEach(function(fproduct) { %>
+
+        <div class="pro">
+          <img src="<%= 'img/products/'+fproduct.avatar[0] %>" alt="" />
+          <div class="des">
+            <span><%= fproduct.brand %></span>
+            <h5><%= fproduct.name %></h5>
+            <div class="star">
+              <% for(let i=0;i<=fproduct.rating;i++){%>
+              <i class="fas fa-star"></i>
+              <%} %>
+            </div>
+            <h4><%= '$'+fproduct.price %></h4>
+          </div>
+          <a onclick="addToCart('<%= fproduct._id %>')"
+            ><i class="fal fa-shopping-cart cart"></i
+          ></a>
+        </div>
+
+        <% }) %>
+      </div>
+    </section>
+    <section
+      id="banner"
+      class="section-m1"
+      style="background-image: url('img/banner/b2.jpg')"
+    >
+      <h4>Repair Services</h4>
+      <h2>Up to <span>70% Off</span>- All t-shirts & Accessories</h2>
+      <button class="normal">Explore More</button>
+    </section>
+
+    <section id="product1" class="section-p1">
+      <h2>New Arrivals</h2>
+      <p>Summer Collection New Morden Design</p>
+      <div class="pro-container">
+        <% newProduct.forEach(function(fproduct) { %>
+
+        <div class="pro">
+          <img src="<%= 'img/products/'+fproduct.avatar[0] %>" alt="" />
+          <div class="des">
+            <span><%= fproduct.brand %></span>
+            <h5><%= fproduct.name %></h5>
+            <div class="star">
+              <% for(let i=0;i<=fproduct.rating;i++){%>
+              <i class="fas fa-star"></i>
+              <%} %>
+            </div>
+            <h4><%= '$'+fproduct.price %></h4>
+          </div>
+          <a onclick="addToCart('<%= fproduct._id %>')"
+            ><i class="fal fa-shopping-cart cart"></i
+          ></a>
+        </div>
+
+        <% }) %>
+      </div>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+      <div
+        class="banner-box"
+        style="background-image: url('img/banner/b17.jpg')"
+      >
+        <h4>crazy deals</h4>
+        <h2>buy 1 get 1 free</h2>
+        <span>The best classic is on sale at cara</span>
+        <button class="white">Learn More</button>
+      </div>
+      <div
+        class="banner-box banner-box2"
+        style="background-image: url('img/banner/b10.jpg')"
+      >
+        <h4>spring/summer</h4>
+        <h2>upcoming season</h2>
+        <span>The best classic is on sale at cara</span>
+        <button class="white">Collection</button>
+      </div>
+    </section>
+    <section id="banner3">
+      <div
+        class="banner-box"
+        style="background-image: url('img/banner/b7.jpg')"
+      >
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+      </div>
+      <div
+        class="banner-box banner-box2"
+        style="background-image: url('img/banner/b4.jpg')"
+      >
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+      </div>
+      <div
+        class="banner-box banner-box3"
+        style="background-image: url('img/banner/b18.jpg')"
+      >
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+      </div>
+    </section>
+
+    <%- include("./partials/footer/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<h1 class="flipo" id="start-mic">
+  <div id="header-chat-instruction">
+    <p>
+      <i class="fa fa-microphone mic-instruction" aria-hidden="true"></i>
+      Go to {page_name}
+    </p>
+    <p>
+      <i class="fa fa-microphone mic-instruction" aria-hidden="true"></i>
+      Add to cart {product_name}
+    </p>
+    <p>
+      <i class="fa fa-microphone mic-instruction" aria-hidden="true"></i>
+      [increase/decrease] quantity of {product_name}
+    </p>
+    <p>
+      <i class="fa fa-microphone mic-instruction" aria-hidden="true"></i>
+      Remove from the cart {product_name}
+    </p>
+    <p>
+      <i class="fa fa-microphone mic-instruction" aria-hidden="true"></i>
+      Cart destroy
+    </p>
+  </div>
+  <i class="fa fa-microphone my-flipo" aria-hidden="true"></i>
+</h1>
+<section id="header">
+  <a href="/home"><img src="img/logo.png" class="logo" alt="" /></a>
+  <div>
+    <ul id="navbar">
+      <li>
+        <a class="<%= link === 'home' ? 'active': '' %>" href="/home"> Home </a>
+      </li>
+      <li>
+        <a class="<%= link === 'shop' ? 'active': '' %>" href="/shop">Shop</a>
+      </li>
+      <li>
+        <a class="<%= link === 'blog' ? 'active': '' %>" href="/blog">Blog</a>
+      </li>
+      <li>
+        <a class="<%= link === 'about' ? 'active': '' %>" href="/about"
+          >About</a
+        >
+      </li>
+      <li>
+        <a class="<%= link === 'contact' ? 'active': '' %>" href="/contact"
+          >Contact</a
+        >
+      </li>
+      <% if(!loggedInUser?.userid){ %>
+      <li>
+        <a class="<%= link === 'register' ? 'active': '' %>" href="/"
+          >Register</a
+        >
+      </li>
+      <% } %>
+      <li id="lg-bag">
+        <a class="<%= link === 'cart' ? 'active': '' %>" href="/cart">
+          <i class="far fa-shopping-bag"></i>
+          <span
+            id="cart-count"
+            style="
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              top: -15px;
+              right: 0px;
+              color: #fdcece;
+              width: 26px;
+              height: 24px;
+              background: #e02121;
+              line-height: 78px;
+              border-radius: 50%;
+              margin: 0;
+              font-size: 12px;
+            "
+            >0</span
+          >
+        </a>
+      </li>
+      <a href="#" id="close">
+        <i class="far fa-times"></i>
+      </a>
+    </ul>
+  </div>
+  <div id="mobile">
+    <a href="#"><i class="far fa-shopping-bag"></i></a>
+    <i id="bar" class="fas fa-outdent"></i>
+  </div>
+</section>

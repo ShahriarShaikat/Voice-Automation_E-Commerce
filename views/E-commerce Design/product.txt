@@ -1,0 +1,9 @@
+id
+name
+product_details
+category [] 
+brand
+rating
+price
+avatar [] 
+featured

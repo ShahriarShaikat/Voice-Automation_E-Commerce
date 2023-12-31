@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/header/top.ejs") %>
+
+  <body>
+    <%- include("./partials/header/header.ejs") %>
+    <section
+      id="page-header"
+      class="cart-header"
+      style="background-image: url('img/about/bannner.png')"
+    >
+      <h2>#let's_talk</h2>
+
+      <p>LEAVE A MESSAGE,We love to hear from you!</p>
+    </section>
+    <section id="cart" class="section-p1">
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Remove</td>
+            <td>Images</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>subtotal</td>
+          </tr>
+        </thead>
+        <tbody id="card-details-body">
+          <tr>
+            <td
+              colspan="6"
+              style="
+                font-size: 16px;
+                padding-bottom: 10px;
+                border: 1px solid #e6e4e4;
+              "
+            >
+              Cart is empty!
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="cart-add" class="section-p1" style="display: none">
+      <div id="cupon">
+        <h3>Apply Coupon</h3>
+        <div>
+          <input type="text" placeholder="Enter Your Coupon" />
+          <button class="style">Apply</button>
+        </div>
+      </div>
+
+      <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+          <tr>
+            <td>Cart Subtotal</td>
+            <td id="cart-subtotal">$ 335</td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong id="cart-total">$ 335</strong></td>
+          </tr>
+        </table>
+        <button class="normal">Proceed to checkout</button>
+      </div>
+    </section>
+    <%- include("./partials/footer/footer.ejs") %>
+    <script>
+      getCartDetails();
+    </script>
+  </body>
+</html>
