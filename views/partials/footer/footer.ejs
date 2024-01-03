@@ -185,7 +185,7 @@
     let link = voicetxt.split(" ");
     const page = ["home", "about", "shop", "blog", "cart", "contact"];
     if (page.includes(link[link.length - 1])) {
-      window.location.href = `http://localhost:3000/` + link[link.length - 1];
+      window.location.href = `https://voice-automation-ecommerce.onrender.com/` + link[link.length - 1];
     } else {
       Toastify({
         text: "Couldn't recognize your voice!",
@@ -208,7 +208,7 @@
         text: "Opps! You need to login first.",
         duration: 2500,
       }).showToast();
-      setTimeout(() => (window.location.href = `http://localhost:3000/`), 3000);
+      setTimeout(() => (window.location.href = `https://voice-automation-ecommerce.onrender.com/`), 3000);
     } else {
       Toastify({
         text: "Product not found or it couldn't recognize your product name properly!",
@@ -230,7 +230,7 @@
         text: "Opps! You need to login first.",
         duration: 2500,
       }).showToast();
-      setTimeout(() => (window.location.href = `http://localhost:3000/`), 3000);
+      setTimeout(() => (window.location.href = `https://voice-automation-ecommerce.onrender.com/`), 3000);
     } else {
       Toastify({
         text: "Product not found or it couldn't recognize your product name properly!",
@@ -259,7 +259,7 @@
         text: "Opps! You need to login first.",
         duration: 2500,
       }).showToast();
-      setTimeout(() => (window.location.href = `http://localhost:3000/`), 3000);
+      setTimeout(() => (window.location.href = `https://voice-automation-ecommerce.onrender.com/`), 3000);
     } else {
       Toastify({
         text: "Product not found or it couldn't recognize your product name properly!",
